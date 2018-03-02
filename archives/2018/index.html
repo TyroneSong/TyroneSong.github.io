@@ -67,56 +67,6 @@
         </hgroup>
         
         
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -168,7 +118,7 @@
                         
                             <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
                         
-                            <li><a  href="/categories/digital">玩转数码</a></li>
+                            <li><a  href="/tags/工具">标签-工具</a></li>
                         
                             <li><a  href="/categories/algorithm">算法学习</a></li>
                         
@@ -179,11 +129,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                                <a class="fl github"  target="_blank" href="https://github.com/TyroneSong" title="github">github</a>
                             
-                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                            
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                                <a class="fl rss"  target="_blank" href="/#" title="rss">rss</a>
                             
                         </ul>
                     </nav>
@@ -191,7 +139,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
                     </div>
                 </section>
                 
@@ -245,7 +193,7 @@
                 
                     <li><a href="/categories/开发工具/">玩转开发工具</a></li>
                 
-                    <li><a href="/categories/digital">玩转数码</a></li>
+                    <li><a href="/tags/工具">标签-工具</a></li>
                 
                     <li><a href="/categories/algorithm">算法学习</a></li>
                 
@@ -257,11 +205,9 @@
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                        <a class="github" target="_blank" href="https://github.com/TyroneSong" title="github">github</a>
                     
-                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                        <a class="rss" target="_blank" href="/#" title="rss">rss</a>
                     
                 </div>
             </nav>
@@ -285,6 +231,68 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
+              <a  href="/2018/03/02/常用工具/" class="archive-article-date">
+      <time datetime="2018-03-02T14:46:23.000Z" itemprop="datePublished">03-02</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2018/03/02/常用工具/">常用工具</a>
+    </h1>
+  
+
+
+        <div class="article-info info-on-archive">
+          
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2018/03/02/Chrome工具导出css文件/" class="archive-article-date">
+      <time datetime="2018-03-02T14:46:23.000Z" itemprop="datePublished">03-02</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2018/03/02/Chrome工具导出css文件/">Chrome工具导出css文件</a>
+    </h1>
+  
+
+
+        <div class="article-info info-on-archive">
+          
+
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
               <a  href="/2018/03/02/新博文/" class="archive-article-date">
       <time datetime="2018-03-02T14:10:14.000Z" itemprop="datePublished">03-02</time>
 </a>
@@ -300,8 +308,16 @@
 
         <div class="article-info info-on-archive">
           
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+    </div>
+
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
@@ -349,7 +365,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 Tyrone
+                &copy; 2018 石&amp;灵
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy

@@ -10,12 +10,13 @@
   <title>新博文 | 石&amp;灵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Tyrone的世界">
+<meta name="keywords" content="测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新博文">
 <meta property="og:url" content="http://yoursite.com/2018/03/02/新博文/index.html">
 <meta property="og:site_name" content="石&amp;灵">
 <meta property="og:description" content="Tyrone的世界">
-<meta property="og:updated_time" content="2018-03-02T14:10:14.285Z">
+<meta property="og:updated_time" content="2018-03-02T15:19:34.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="新博文">
 <meta name="twitter:description" content="Tyrone的世界">
@@ -68,56 +69,6 @@
         </hgroup>
         
         
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -169,7 +120,7 @@
                         
                             <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
                         
-                            <li><a  href="/categories/digital">玩转数码</a></li>
+                            <li><a  href="/tags/工具">标签-工具</a></li>
                         
                             <li><a  href="/categories/algorithm">算法学习</a></li>
                         
@@ -180,11 +131,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                                <a class="fl github"  target="_blank" href="https://github.com/TyroneSong" title="github">github</a>
                             
-                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                            
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                                <a class="fl rss"  target="_blank" href="/#" title="rss">rss</a>
                             
                         </ul>
                     </nav>
@@ -192,7 +141,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
                     </div>
                 </section>
                 
@@ -246,7 +195,7 @@
                 
                     <li><a href="/categories/开发工具/">玩转开发工具</a></li>
                 
-                    <li><a href="/categories/digital">玩转数码</a></li>
+                    <li><a href="/tags/工具">标签-工具</a></li>
                 
                     <li><a href="/categories/algorithm">算法学习</a></li>
                 
@@ -258,11 +207,9 @@
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                        <a class="github" target="_blank" href="https://github.com/TyroneSong" title="github">github</a>
                     
-                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                        <a class="rss" target="_blank" href="/#" title="rss">rss</a>
                     
                 </div>
             </nav>
@@ -296,8 +243,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -316,7 +271,7 @@
         <p><span>本文标题:</span><a  href="/2018/03/02/新博文/">新博文</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Tyrone 的个人博客">Tyrone</a></p>
         <p><span>发布时间:</span>2018年03月02日 - 22时10分</p>
-        <p><span>最后更新:</span>2018年03月02日 - 22时10分</p>
+        <p><span>最后更新:</span>2018年03月02日 - 23时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/03/02/新博文/" title="新博文">http://yoursite.com/2018/03/02/新博文/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/03/02/新博文/　　作者: Tyrone" title=""></span>
@@ -329,6 +284,15 @@
 
 
 <nav id="article-nav">
+  
+    <a  href="/2018/03/02/Chrome工具导出css文件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Chrome工具导出css文件
+        
+      </div>
+    </a>
   
   
     <a  href="/2018/03/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -415,7 +379,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2018/03/02/Chrome工具导出css文件/" title="上一篇: Chrome工具导出css文件">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -424,7 +390,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/新博文/">新博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/常用工具/">常用工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/Chrome工具导出css文件/">Chrome工具导出css文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/新博文/">新博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/hello-world/">Hello World</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
@@ -458,7 +424,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 Tyrone
+                &copy; 2018 石&amp;灵
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
